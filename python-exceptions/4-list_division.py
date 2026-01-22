@@ -8,7 +8,7 @@ def list_division(my_list_1, my_list_2, list_length):
             a = my_list_1[i]
             b = my_list_2[i]
             if not isinstance(a, (int, float)) or not isinstance(b, (int, float)):
-                result = 0
+                raise TypeError
             else:
                 result = a / b
         except (TypeError):
