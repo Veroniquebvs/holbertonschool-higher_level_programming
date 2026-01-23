@@ -7,3 +7,20 @@ Hello.
 How are you?
 
 I'm fine:
+
+>>> text_indentation("Hello.   How are you?   Fine:")
+Hello.
+
+How are you?
+
+Fine:
+
+>>> text_indentation("No punctuation here")
+No punctuation here
+
+>>> text_indentation("")
+
+>>> text_indentation(123)
+Traceback (most recent call last):
+...
+TypeError: text must be a string
