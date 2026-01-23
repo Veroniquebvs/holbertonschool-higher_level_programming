@@ -23,7 +23,7 @@ def text_indentation(text):
                 i += 1
         i += 1
 
-    print(result.strip())
+    print(result, end="")
 
 
 if __name__ == "__main__":
