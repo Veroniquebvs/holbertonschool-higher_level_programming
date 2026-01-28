@@ -47,9 +47,9 @@ class Square:
         """
         This method sets the position of the square
         """
-        if isinstance(value[0], int) or isinstance(value[1], int):
+        if isinstance(value[0], int) and isinstance(value[1], int):
             raise TypeError("position must be a tuple of 2 positive integers")
-        if value[0] < 0 or value[1] < 0:
+        if value[0] < 0 and value[1] < 0:
             raise TypeError("position must be a tuple of 2 positive integers")
         self.__position = value
 
@@ -67,7 +67,7 @@ class Square:
             print("")
         else:
             if int(self.__position[1]) > 0:
-                print()
+                print("" * int(self.__position[1]))
             for i in range(self.__size):
                 print(" " * int(self.__position[0]), end="")
                 print("#" * self.__size)
