@@ -25,7 +25,7 @@ class Rectangle:
     @property
     def height(self):
         """
-        This method retrives the position of the rectangle
+        This method retrives the height of the rectangle
         """
         return self.__height
 
@@ -67,3 +67,12 @@ class Rectangle:
             return 0
         else:
             return (self.__width + self.__height) * 2
+
+    def __str__(self):
+        if self.__width == 0 or self.__height == 0:
+            return ""
+        else:
+            line = []
+            for i in range(self.__height):
+                line.append("#" * self.__width)
+            return "\n".join(line)
