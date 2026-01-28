@@ -18,14 +18,14 @@ class Rectangle:
     @property
     def width(self):
         """
-        This method retrieves the widht of the rectangle
+        This method retrieves the width of the rectangle
         """
         return self.__width
 
     @property
     def height(self):
         """
-        This method retrives the position of the suqare
+        This method retrives the position of the rectangle
         """
         return self.__height
 
@@ -64,8 +64,6 @@ class Rectangle:
         This function returns the perimeter of the rectangle
         """
         if self.__width == 0 or self.__height == 0:
-            perimeter = 0
             return 0
         else:
-            perimeter = self.__width * 2 + self.__height * 2
-        return perimeter
+            return (self.__width + self.__height) * 2
