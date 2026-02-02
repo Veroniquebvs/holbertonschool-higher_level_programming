@@ -12,4 +12,4 @@ def lookup(obj):
 
     :param obj: Name of the object
     """
-    print(list(obj.__dict__))
+    return dir(obj)
