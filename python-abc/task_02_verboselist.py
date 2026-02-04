@@ -17,3 +17,4 @@ class VerboseList(list):
         item = self[i]
         print(f"Popped [{item}] from the list.")
         super().pop(i)
+        return item
