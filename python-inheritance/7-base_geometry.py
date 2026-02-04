@@ -1,12 +1,12 @@
 #!/usr/bin/python3
 """
-This module defines a BaseGeometry class
+Define a BaseGeometry class
 """
 
 
 class BaseGeometry:
     """
-    This class is a BaseGeometry
+    Represent base geometry
     """
     def area(self):
         raise Exception("area() is not implemented")
