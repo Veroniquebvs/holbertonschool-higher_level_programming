@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-This module prints a list
+This module defines Mylist
 """
 
 
@@ -9,5 +9,6 @@ class MyList(list):
         """
         This function prints a sorted list
         """
-        new_list = sorted(self)
+        new_list = self.copy()
+        new_list.sort()
         print(new_list)
