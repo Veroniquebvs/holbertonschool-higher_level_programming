@@ -40,6 +40,12 @@ class Student:
             return descript_object
 
     def reload_from_json(self, json):
+        """
+        This function replaces all attributes of the Student instance
+
+        :param self: object
+        :param json: dictionary
+        """
         for key, value in json.items():
             if key in self.__dict__:
                 self.__dict__[key] = value
