@@ -9,14 +9,14 @@ def fetch_and_print_posts():
         print(f"Status Code: {r.status_code}")
         new_data = r.json()
         for item in new_data:
-            print(item.get("title"))
+            print(item["title"])
 
 
 def fetch_and_save_posts():
     r = requests.get('https://jsonplaceholder.typicode.com/posts')
+    new_list = []
     if r.status_code == 200:
         new_data = r.json()
-        new_list = []
         for item in new_data:
             post_dict = {"id": item["id"], "title": item["title"],
                          "body": item["body"]}
