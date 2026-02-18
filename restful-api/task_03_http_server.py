@@ -35,7 +35,10 @@ class my_new_class(http.server.BaseHTTPRequestHandler):
     def response(self, my_content, content_type, status_code=200):
         my_content_bytes = my_content.encode('utf-8')
         self.send_response(status_code)
-        self.send_header("Content-type", f"{content_type}; charset=utf-8")
+        if content_type == "application/json":
+            self.send_header("Content-type", content_type)
+        else:
+            self.send_header("Content-type", f"{content_type}; charset=utf-8")
         self.send_header("Content-Length", str(len(my_content_bytes)))
         self.end_headers()
         self.wfile.write(my_content_bytes)
