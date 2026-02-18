@@ -19,8 +19,8 @@ def fetch_and_save_posts():
         post_dict = {}
         new_list = []
         for item in new_data:
-            post_dict = {"id": item.get("id"), "title": item.get("title"),
-                         "body": item.get("body")}
+            post_dict = {"id": item["id"], "title": item["title"],
+                         "body": item["body"]}
             new_list.append(post_dict)
 
     csv_file = "posts.csv"
