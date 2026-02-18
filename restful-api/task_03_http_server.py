@@ -28,7 +28,7 @@ class my_new_class(http.server.BaseHTTPRequestHandler):
             self.response(my_content, content_type)
 
         else:
-            my_content = "404 Endpoint not found"
+            my_content = "Endpoint not found"
             content_type = "text/plain"
             self.response(my_content, content_type, 404)
 
