@@ -45,7 +45,6 @@ def auth_error(status):
 @app.route("/basic-protected", methods=["GET"])
 @auth.login_required
 def basic_protected():
-    user = auth.current_user()
     return jsonify({"message": "Basic Auth: Access Granted"})
 
 
@@ -53,6 +52,8 @@ def basic_protected():
 @app.route("/login", methods=["POST"])
 def login():
     data = request.get_json()
+    if not data:
+        return jsonify({"error": "Unauthorized"}), 401
     username = data.get("username")
     password = data.get("password")
 
