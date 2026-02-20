@@ -1,8 +1,8 @@
 # Serialization
 
-## In this project, I learnt :
+## In this project, I learnt to :
 
-Articulate the differences and similarities between marshaling and serialization.
+Describe the differences and similarities between marshaling and serialization.
 
 Implement serialization in a practical programming task.
 
