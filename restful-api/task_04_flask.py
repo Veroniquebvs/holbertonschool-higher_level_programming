@@ -42,7 +42,7 @@ def create_user():
     else:
         username = new_user["username"]
         users[username] = new_user
-        return jsonify(new_user), 201
+        return jsonify({"message": "User added", "user": new_user}), 201
 
 
 if __name__ == "__main__":
