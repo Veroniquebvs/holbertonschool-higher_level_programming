@@ -7,22 +7,22 @@ app = Flask(__name__)
 users = {}
 
 
-@app.route("/")
+@app.route("/", methods=["GET"])
 def home():
     return "Welcome to the Flask API!"
 
 
-@app.route("/data")
+@app.route("/data", methods=["GET"])
 def get_users():
     return jsonify(list(users.keys))
 
 
-@app.route("/status")
+@app.route("/status", methods=["GET"])
 def get_status():
     return "OK"
 
 
-@app.route("/users/<username>")
+@app.route("/users/<username>", methods=["GET"])
 def get_username(username):
     if username in users:
         return jsonify(users[username])
