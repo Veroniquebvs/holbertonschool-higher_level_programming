@@ -67,7 +67,7 @@ curl -X POST https://jsonplaceholder.typicode.com/posts \
 
 ---
 
-## 1️⃣ Formater proprement le JSON
+## 1️ Formater proprement le JSON
 
 ```bash
 curl https://jsonplaceholder.typicode.com/posts/1 | jq
