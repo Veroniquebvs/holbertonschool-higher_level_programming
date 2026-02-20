@@ -53,7 +53,7 @@ def basic_protected():
 def login():
     data = request.get_json()
     if not data:
-        return jsonify({"error": "Unauthorized"}), 401
+        return jsonify({"error": "Invalid request"}), 400
     username = data.get("username")
     password = data.get("password")
 
@@ -71,7 +71,7 @@ def login():
 @app.route("/jwt-protected", methods=["GET"])
 @jwt_required()
 def jwt_protected():
-    current_user = get_jwt_identity()
+    get_jwt_identity()
     return jsonify({"message": "JWT Auth: Access Granted"}), 200
 
 
@@ -79,7 +79,7 @@ def jwt_protected():
 @app.route("/admin-only", methods=["GET"])
 @jwt_required()
 def admin_only():
-    current_user = get_jwt_identity()
+    get_jwt_identity()
     claims = get_jwt()
     if claims.get("role") != "admin":
         return jsonify({"error": "Admin access required"}), 403
