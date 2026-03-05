@@ -17,14 +17,15 @@ if __name__ == "__main__":
         db=database
     )
 
-    cursor = db.cursor()
+    cur = db.cursor()
 
-    cursor.execute("SELECT c.id, c.name, s.name FROM cities AS c "
-                   "INNER JOIN states AS s ON s.id = c.state_id "
-                   "ORDER BY c.id ASC")
+    cur.execute("SELECT c.id, c.name, s.name FROM cities AS c "
+                "INNER JOIN states AS s ON s.id = c.state_id "
+                "ORDER BY c.id ASC")
 
-    rows = cursor.fetchall()
+    rows = cur.fetchall()
     for row in rows:
         print(row)
 
+    cur.close()
     db.close()
