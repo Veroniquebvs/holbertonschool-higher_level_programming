@@ -20,7 +20,7 @@ if __name__ == "__main__":
 
     cursor = db.cursor()
 
-    sql = ("SELECT * FROM states WHERE name = %s ORDER BY states.id ASC")
+    sql = ("SELECT * FROM states WHERE name = %s ORDER BY id ASC")
 
     cursor.execute(sql, (state_name_searched,))
 
