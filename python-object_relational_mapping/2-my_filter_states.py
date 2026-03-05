@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""a script that lists all states with a name starting with N"""
+"""a script that takes in an argument and displays all values in the states table"""
 
 import MySQLdb
 import sys
@@ -8,6 +8,7 @@ if __name__ == "__main__":
     username = sys.argv[1]
     password = sys.argv[2]
     database = sys.argv[3]
+    state_name_searched = sys.argv[4]
 
     db = MySQLdb.connect(
         host="localhost",
@@ -19,7 +20,7 @@ if __name__ == "__main__":
 
     cursor = db.cursor()
 
-    cursor.execute("SELECT * FROM states WHERE name LIKE 'N%' ORDER BY states.id ASC")
+    cursor.execute("SELECT * FROM states WHERE name = '{}' ORDER BY states.id ASC".format(state_name_searched))
 
     rows = cursor.fetchall()
     for row in rows:
