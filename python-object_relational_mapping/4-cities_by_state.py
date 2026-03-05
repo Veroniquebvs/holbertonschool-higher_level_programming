@@ -20,7 +20,7 @@ if __name__ == "__main__":
     cursor = db.cursor()
 
     cursor.execute("SELECT c.id, c.name, s.name FROM cities AS c "
-                   "INNER JOIN states AS s ON s.id = c.id "
+                   "INNER JOIN states AS s ON s.id = c.state_id "
                    "ORDER BY c.id ASC")
 
     rows = cursor.fetchall()
