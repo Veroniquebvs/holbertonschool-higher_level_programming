@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-"""a script that takes in an argument and displays all values in the states table"""
+"""a script that takes in an argument and displays all values in the
+states table"""
 
 import MySQLdb
 import sys
@@ -19,8 +20,6 @@ if __name__ == "__main__":
     )
 
     cursor = db.cursor()
-
-    
 
     rows = cursor.fetchall()
     for row in rows:
