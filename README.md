@@ -33,3 +33,5 @@
 ## SQL - More queries
 
 ## Python - Object-relationnal mapping
+
+## JavaScript - Warm up
