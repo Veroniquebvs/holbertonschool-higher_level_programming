@@ -35,3 +35,5 @@
 ## Python - Object-relationnal mapping
 
 ## JavaScript - Warm up
+
+## JavaScript - DOM manipulation
