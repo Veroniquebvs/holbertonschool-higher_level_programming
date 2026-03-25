@@ -37,3 +37,5 @@
 ## JavaScript - Warm up
 
 ## JavaScript - DOM manipulation
+
+## Python - Server-Side Rendering
