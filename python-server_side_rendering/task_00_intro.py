@@ -5,14 +5,12 @@ def generate_invitations(template, attendees):
     if not isinstance(template, str):
         raise ValueError(f"Error : {template} isn't a string")
     if not template:
-        print("Template is empty, no output files generated.")
-        return None
+        raise ValueError("Template is empty, no output files generated.")
 
     if not isinstance(attendees, list):
         raise ValueError(f"Error : {attendees} isn't a list")
     if not attendees:
-        print("No data provided, no output files generated.")
-        return None
+        raise ValueError("No data provided, no output files generated.")
     for items in attendees:
         if not isinstance(items, dict):
             raise ValueError(f"{items} isn't a list of dictionaries")
