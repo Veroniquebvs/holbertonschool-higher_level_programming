@@ -9,13 +9,14 @@
             <h1>Items List</h1>              
                 {% if not items %}
                     <p>No items found</p>
+
+                {% else %}
                 <ul>
-                    {% else %}
-                        {% for item in items %}
-                            <li>{{ item }}</li>
-                        {% endif %}
+                    {% for item in items %}
+                        <li>{{ item }}</li>
                     {% endfor %}
                 </ul>
+                {% endif %}
         </main>
    </body>
    </html>
