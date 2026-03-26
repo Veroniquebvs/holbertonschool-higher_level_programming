@@ -6,14 +6,13 @@
    </head>
    <body>
         <main>
-            <h1>Items List</h1>
+            <h1>Items List</h1>              
+                {% if not items %}
+                    <p>No items found</p>
                 <ul>
-                    {% for item in items %}
-                        {{ item.name }}
-                        {% if not items %}
-                            <li>print("No items found")</li>
-                        {% else %}
-                            <li>{{ item.name }}</li>
+                    {% else %}
+                        {% for item in items %}
+                            <li>{{ item }}</li>
                         {% endif %}
                     {% endfor %}
                 </ul>
