@@ -39,3 +39,5 @@
 ## JavaScript - DOM manipulation
 
 ## Python - Server-Side Rendering
+
+## Python - Everything is object
